@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from "react";
 import { Box, Container, Divider, Paper, Typography } from '@mui/material';
 import ClickMeDialog from './components/ClickMeDialog.components';
@@ -24,7 +23,6 @@ function App() {
 
   const gameToShow = incomingPopups?.find((popup: IncomingPopups) =>
     popup.start_on === GetTime().fullDate && !popup.completed
-    // popup.start_on === gameStartDate && !popup.completed
   )
 
   // handle game completion
@@ -33,8 +31,6 @@ function App() {
 
     updatePopUp({ updatedData: { id: gameToShow.id, answers } });
   };
-
-  console.log("todaysData", todaysData)
 
   const todaysImage = todaysData?.data[0]?.image ? todaysData?.data[0]?.image : null
   const todaysTitle = todaysData?.data[0]?.title ? todaysData?.data[0]?.title : null
