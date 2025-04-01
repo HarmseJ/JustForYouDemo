@@ -3,20 +3,20 @@ import { IncomingData } from "../interfaces/IncomingData.interfaces";
 import { IncomingPopups } from "../interfaces/IncomingPopUps.interfaces";
 import GetTime from "../components/GetTime.components";
 
-// --- Mock Data (API logic not shown in demo mode) ---
+// --- Mock Data (API logic not shown in DEMO mode) --- //
 const mockIncomingData: IncomingData[] = [
   { 
     id: 1, 
     day: GetTime().day, 
     showNext: true, 
     data: [{
-      image: "https://images.pexels.com/photos/30945514/pexels-photo-30945514/free-photo-of-wooden-tiles-spelling-demo-with-blurred-background.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Demo Title",
-      message: "Demo Message"
+      image: "https://images.pexels.com/photos/2041832/pexels-photo-2041832.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "A Little Boost",
+      message: "Hello, friend! Glad you stopped by. This is your daily little boost, written just for you. Hope your day is full of good things!"
     }],
     picks: [{
-      title: "Demo",
-      iconName: "OndemandVideoIcon",
+      title: "Glad you're here!",
+      iconName: "WavingHand",
   }]
   },
 ];
@@ -25,8 +25,8 @@ const mockPopups: IncomingPopups[] = [
   { 
     id: 1,
     start_on: GetTime().fullDate,
-    name: "The Demo",
-    about: "This is a demo game to showcase the functionality of the popup system. In this game, you can simply press a button to continue.",
+    name: "The Message Gate",
+    about: "One gate stands between you and today’s message. Simply press the button to continue.",
     completed: false,
     answers: [],
   },

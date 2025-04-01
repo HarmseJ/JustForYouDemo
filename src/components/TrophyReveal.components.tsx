@@ -3,7 +3,7 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import { QuestionMarkTwoTone, WorkspacePremiumTwoTone } from '@mui/icons-material';
 import { GlobalProvider } from '../global/GlobalProvider.global';
-import { JoinFull } from "@mui/icons-material";
+import MessageIcon from '@mui/icons-material/Message';
 
 export default function TrophyReveal() {
   const [openTooltip, setOpenTooltip] = useState<number | null>(null);
@@ -13,7 +13,7 @@ export default function TrophyReveal() {
 
   const actions = [
     {
-      icon: incomingPopups[0]?.completed ? <JoinFull sx={{ color: '#FFD700', filter: 'drop-shadow(0px 0px 6px #FFD700)' }} /> : <QuestionMarkTwoTone sx={{ color: '#fff' }} />,
+      icon: incomingPopups[0]?.completed ? <MessageIcon sx={{ color: '#FFD700', filter: 'drop-shadow(0px 0px 6px #FFD700)' }} /> : <QuestionMarkTwoTone sx={{ color: '#fff' }} />,
       name: incomingPopups[0]?.completed ? incomingPopups[0]?.name : 'Brewing',
     },
     { icon: '', name: '' },
@@ -77,7 +77,6 @@ export default function TrophyReveal() {
             sx={{
               '& .MuiSpeedDialAction-staticTooltipLabel': {
                 backgroundColor: 'transparent',
-                // color: '#FFA500',
                 color: 'rgb(255, 255, 255)',
                 fontSize: '0.6rem',
                 fontFamily: 'Poppins, sans-serif',
@@ -85,7 +84,6 @@ export default function TrophyReveal() {
                 borderRadius: '8px',
                 padding: '6px 0px',
                 border: "none",
-
                 boxShadow: 'none',
               },
             }}

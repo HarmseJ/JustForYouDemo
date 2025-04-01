@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Button, Container, Paper, Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
-import { JoinFull } from "@mui/icons-material";
+import MessageIcon from '@mui/icons-material/Message';
 import { GlobalProvider } from "../global/GlobalProvider.global";
 import ThePopupPredicament from "./ThePopupPredicament.games";
 
 const impossibleChoices = [
-  { option1: "Press to continue", option2: "Press to continue" },
+  { option1: "Press to continue" },
 ];
 
 const ImpossibleDecisionGame = (props: { handleGameCompletion: (answers: any[]) => void }) => {
@@ -62,7 +62,7 @@ const ImpossibleDecisionGame = (props: { handleGameCompletion: (answers: any[]) 
             }}>
               {gameName}
             </Typography>
-            <JoinFull sx={{ fontSize: 100, color: '#fbc02d' }} />
+            <MessageIcon sx={{ fontSize: 100, color: '#fbc02d' }} />
             <Typography variant="subtitle2" textAlign={"center"} sx={{ color: "rgba(255, 255, 255, 0.45)", margin: "0px 40px 0px 40px" }} gutterBottom>
               Since tapping a button for a cute message is far too easy, here’s a challenge. Welcome to <br />
               <span
@@ -85,7 +85,6 @@ const ImpossibleDecisionGame = (props: { handleGameCompletion: (answers: any[]) 
                 variant="contained"
                 fullWidth
                 sx={{
-                  mb: 2,
                   height: 50,
                   borderRadius: 2,
                   background: 'linear-gradient(135deg, #6a85b6 0%, #bac8e0 100%)',
@@ -97,22 +96,6 @@ const ImpossibleDecisionGame = (props: { handleGameCompletion: (answers: any[]) 
                 onClick={() => handleChoice(1, impossibleChoices[currentQuestion].option1)}
               >
                 {impossibleChoices[currentQuestion].option1}
-              </Button>
-              <Button
-                variant="contained"
-                fullWidth
-                sx={{
-                  height: 50,
-                  borderRadius: 2,
-                  background: 'linear-gradient(135deg, #6a85b6 0%, #bac8e0 100%)',
-                  color: 'white',
-                  '&:hover': {
-                    background: 'linear-gradient(135deg, #5a75a6 0%, #aab8d0 100%)',
-                  },
-                }}
-                onClick={() => handleChoice(2, impossibleChoices[currentQuestion].option2)}
-              >
-                {impossibleChoices[currentQuestion].option2}
               </Button>
             </Box>
 
@@ -179,7 +162,7 @@ const ImpossibleDecisionGame = (props: { handleGameCompletion: (answers: any[]) 
                 damping: 12,
               }}
             >
-              <JoinFull sx={{ fontSize: 80, color: '#fbc02d' }} />
+              <MessageIcon sx={{ fontSize: 80, color: '#fbc02d' }} />
             </motion.div>
             <Button
               variant="contained"
